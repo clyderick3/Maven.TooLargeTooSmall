@@ -19,10 +19,26 @@ public class Main {
         int timesTried = 0;
 //Max amount of times the guesser can guess
         int maxTries = 7;
-        int Number = 33;
+        int MyNumber = 33;
 
         System.out.println("Guess a number between 0 and 50.");
         scanner.nextInt();
-        System.out.println("You guessed " + "this" + ".");
+
+        for (timesTried = 1; timesTried < 7; timesTried++);
+        int number = scanner.nextInt();
+        if (number == result) {
+            System.out.println("You have guessed the correct number!");
+            System.out.println("The number was indeed "+ MyNumber + ".");
+        }
+        else if (number > MyNumber) {
+            System.out.println("You guess is too high.");
+        }
+        else if (number < MyNumber) {
+            System.out.println("Your guess is too low.");
+        }
+        else {
+            System.out.println("You have run out of guesses. Sorry.");
+            System.out.println("The number was " + MyNumber + ".");
+        }
     }
 }
